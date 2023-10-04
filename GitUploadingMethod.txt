@@ -1,0 +1,33 @@
+echo "# MCS24" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Mr-Raizada/MCS24.git
+git push -u origin main
+
+
+Pushing to Different Branch 
+# Create a new branch and switch to it
+git branch new_feature
+git checkout new_feature
+
+# Make changes and commit
+# (e.g., edit files, add and commit changes)
+git add .
+git commit -m "Implemented new feature"
+
+# Switch back to the main branch
+git checkout main
+
+# Merge the changes from the new_feature branch into the main branch
+git merge new_feature
+
+# Push the changes to the remote repository
+git push origin main
+
+# Delete the feature branch if you don't need it anymore
+git branch -d new_feature
+
+
+
