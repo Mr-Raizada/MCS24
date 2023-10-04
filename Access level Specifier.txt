@@ -1,0 +1,72 @@
+/* Access level Specifier 
+	Specifier 	Class	 subclass	package	    world
+	Private		X	  						
+	Protected	X	    X*		  X		
+	Public 		X	    X		  X           X
+	Package 	X			  X
+*/	
+//Private - most restrictive access level . only to the class in which it is defined it is utilised there
+//Example
+class First
+{
+	private int MyPrivate;      // private data members
+	private void privateMethod() //private member function
+	{
+		System.out.println("Inside privateMethod");
+	}
+}
+class Second 
+{	
+	void accessMethod()
+	{
+		First a = new First()
+		a.MyPrivate = 51;  //illegal 
+		a.privateMethod(); //illeagal
+	}
+}
+
+class Alpha
+{
+	private int MyPrivate;
+	boolean isEqualTo(First anotherObject)
+	{
+		if (this.MyPrivate == anotherobject.MyPrivate)
+		return true;
+		else
+		return false;
+	}
+}
+//Protected -	allowed in its own subclasses in the same packages
+//Another Examples
+public class Student
+{
+	protected int age;
+	public String name;
+	protected void protectedMethod()
+	{
+		System.out.println("ProtectedMethod");
+	}
+}
+//Public -  easiest access specifier - member by outsider 
+
+public class Account 
+{	
+	public String name;
+	protected String Address;
+	protected int Acc_No;
+	public void publicMethod()
+	{
+		System.out.println("publicMethod");
+	}
+}
+class Saving_Account
+{
+	void accessMethod()
+	{
+		Account a = new Account();
+		String MyName;
+		a.name = MyName;	//legal	
+		a.publicMethod();	//legal
+	}
+}
+	

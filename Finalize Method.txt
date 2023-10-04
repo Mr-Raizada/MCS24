@@ -1,0 +1,24 @@
+//Finalize Method 
+class OpenAFile 
+{	
+	FileInputStream aFile = null;	
+	OpenAFile(String filename )
+	{
+		try 
+		{
+			a File = new FileInputStream(filename);
+		}	
+		catch(java.io.FileNotFoundExpection e)
+		{
+			System.err.println("Could not open file " + filename);	
+		}
+	}
+}
+protected void finalize ()throws throwable
+{
+	if(aFile != null)
+	{
+		aFile.close();
+		aFile = null;
+	}
+}

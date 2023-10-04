@@ -1,0 +1,16 @@
+//Abstract class
+public abstract class Player
+//class is abstract
+{
+	private String name;
+	public Player(String vname);
+	{
+		name = vname;
+	}
+	public String getName() 	//regular method 
+	{
+		return(name);
+	}
+	public abstract void Play();
+	// abstract method no implmentation
+}

@@ -1,0 +1,66 @@
+Inheritence Notes
+//from generalization to specialization 
+//Example of Employee class 
+class BankAccount
+{
+	data members ;
+	member functions;
+}
+// so to inheret this class we can use extend keyword. like saving account 
+class SavingAccount extends BankAccount
+{
+	data members;
+	member functions;
+}
+//a class derived from the super class is called a subclass.
+//Sometimes superclass are also called as the parent class or base class 
+//subclass- as child class or the derived class 
+
+
+//An Employe class that is used to calculate the hourly pay of an worker to determine the work of it
+public class Employee
+{
+	protected double attitude;
+	protected int numHoursPerWeek, wagePerHour;
+	public Employee(int wage, int hours, double att)//constructor
+	{
+		wagePerHour = wage;
+		numHoursPerWeek = hours;		
+		attitude = att;
+	}
+	public double getProductivity()
+	{
+		return numHoursPerWeek * attitude;
+	}
+	public double getTeamProductivity()
+	{	
+		return getProductivity()
+	}
+	public int WeekSalary()
+	{
+		return WagePerHour*numHoursPerWeek;
+	}
+}
+
+public class Manager extends Employee
+{
+	//subclass of Employee
+	public Manager(int wage, int hours, double att, Employee underling)
+	{
+		super(wage, hours, att)
+		//chain to our superclass constructors
+	}
+	public double getTeamProductivity()
+	{
+		//Implementation here
+	}
+	public void addUnderlinings(Employee anUnderlining)
+	{
+		//Implementation here
+	}
+	public void removeUnderlinings(Employee anUnderlining)
+	{
+		//Implementation here
+	}
+		
+}
